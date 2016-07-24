@@ -46,9 +46,10 @@ module.exports = ->
     @expectation = @transform.shouldToBoolean expectation
     @expect(@elementHelper.hasClass(@currentPage[@tabName], 'active')).to.eventually.equal @expectation
 
-  @Then /^the "([^"]*)" should be present$/, (el) ->
+  @Then /^the "([^"]*)" (should|should not) be present$/, (el, expectation) ->
     @el = @transform.stringToVariableName el
-    @expect(@currentPage[@el].isPresent()).to.eventually.equal true
+    @expectation = @transform.shouldToBoolean expectation
+    @expect(@currentPage[@el].isPresent()).to.eventually.equal @expectation
 
   @Then /^I (?:should be on|reach|am taken to) the "([^"]*)" page$/, (pageName) ->
     @currentPage = new @pageObjectMap[pageName]

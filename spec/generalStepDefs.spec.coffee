@@ -433,13 +433,19 @@ describe 'General Step Defs', ->
     describe 'regex', ->
 
       before ->
-        stepPattern = '/^the "([^"]*)" should be present$/'
+        stepPattern = '/^the "([^"]*)" (should|should not) be present$/'
 
       it 'should match \'the "Home Button" should be present\'', ->
         verifyStepMatch 'the "Home Button" should be present'
+        
+      it 'should match \'the "Home Button" should not be present\'', ->
+        verifyStepMatch 'the "Home Button" should not be present'
 
-      it 'should capture the element name', ->
+      it 'should capture the present element name', ->
         verifyStepCaptures 'the "Home Button" should be present', 'Home Button'
+      
+      it 'should capture the not present element name', ->
+        verifyStepCaptures 'the "Home Button" should not be present', 'Home Button'
 
     describe 'execution', ->
 
@@ -459,15 +465,23 @@ describe 'General Step Defs', ->
           browser.driver.switchTo().defaultContent()
           browser.driver.executeScript "fixtures.cleanUp();"
 
-        it 'should succeed', ->
+        it 'should succeed when checking for present element', ->
           executeStep 'the "Button" should be present', ->
             expect(currentStepResult.getStatus()).to.equal Cucumber.Status.PASSED
+            
+        it 'should fail when checking for not present element', ->
+          executeStep 'the "Button" should not be present', ->
+            expect(currentStepResult.getStatus()).to.equal Cucumber.Status.FAILED
 
       describe 'without element present', ->
 
-        it 'should fail', ->
+        it 'should fail when checking for present element', ->
           executeStep 'the "Button" should be present', ->
             expect(currentStepResult.getStatus()).to.equal Cucumber.Status.FAILED
+            
+        it 'should succeed when checking for not present element', ->
+          executeStep 'the "Button" should not be present', ->
+            expect(currentStepResult.getStatus()).to.equal Cucumber.Status.PASSED
 
   describe 'I should be on the "___" page', ->
 

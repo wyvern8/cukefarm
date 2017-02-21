@@ -1,6 +1,6 @@
 {
   "name": "cukefarm",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "An opinionated template for writing Cucumber tests with Protractor",
   "main": "index.js",
   "engines": {
@@ -26,14 +26,14 @@
     "express": "^4.14.0",
     "js-fixtures": "^1.5.3",
     "mocha": "^3.0.0",
-    "protractor": "^4.0.2",
+    "protractor": "^5.1.0",
     "protractor-cucumber-framework": "^0.6.0",
     "sinon": "^1.17.5",
     "sinon-as-promised": "^4.0.2"
   },
   "peerDependencies": {
     "cucumber": "^1.0.0",
-    "protractor": "^4.0.0",
+    "protractor": "^5.0.0",
     "protractor-cucumber-framework": "^0.6.0"
   },
   "homepage": "https://github.com/ReadyTalk/cukefarm",

@@ -31,16 +31,16 @@ before_install:
     - "sh -e /etc/init.d/xvfb start"
     - "npm install -g npm@3"
 
-script: "npm test"
+script: 
+    - "npm test"
+    - "npm pack"
 
 deploy:
   provider: releases
   api_key: "$GITHUB_OAUTH_TOKEN"
   file_glob: true
   file: 
-    - lib/support/*.js
-    - lib/protractor.conf.js
-    - lib/step_definitions/GeneralStepDefs.js
+    - cukefarm-*.tgz
   skip_cleanup: true
   on:
     tags: true

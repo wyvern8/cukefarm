@@ -2,6 +2,7 @@ node_modules/
 .tmp/
 spec/test_app/scripts/main.js
 lib/
+package/
 npm-debug.log
 
 .idea/

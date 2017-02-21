@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ReadyTalk/cukefarm"
+    "url": "https://github.com/wyvern8/cukefarm"
   },
   "dependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^5.3.0",
     "q": "^1.4.1"
   },
-  "author": "Nathan Thompson",
+  "author": "Andrew Vaughan",
   "license": "MIT",
   "devDependencies": {
     "coffee-script": "^1.10.0",
@@ -36,7 +36,7 @@
     "protractor": "^5.1.0",
     "protractor-cucumber-framework": "^0.6.0"
   },
-  "homepage": "https://github.com/ReadyTalk/cukefarm",
+  "homepage": "https://github.com/wyvern8/cukefarm",
   "keywords": [
     "cucumber",
     "cucumberjs",

@@ -5,7 +5,7 @@ An opinionated template for writing Cucumber tests with Protractor.
 
 CukeFarm provides a set of [Cucumber] Steps that can be used to build feature files that are backed by automation using the [Protractor] framework. It also provides a set of helper functions that can be used when writing your own Step Definitions. Check out the [docs] directory for a full list of the Steps and helper functions. The docs are automatically generated using [docha].
 
-[![Build Status](https://travis-ci.org/ReadyTalk/cukefarm.svg?branch=master)](https://travis-ci.org/ReadyTalk/cukefarm)
+[![Build Status](https://travis-ci.org/wyvern8/cukefarm.svg?branch=master)](https://travis-ci.org/wyvern8/cukefarm)
 
 # Getting Started
 

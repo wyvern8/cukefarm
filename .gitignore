@@ -4,6 +4,7 @@ spec/test_app/scripts/main.js
 lib/
 package/
 npm-debug.log
+*.tgz
 
 .idea/
 cukefarm.iml
